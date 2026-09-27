@@ -5,13 +5,7 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse("""<h1>Hey i am a Django Server.</h1>
-        <p>hey this is coming from django server.</p>
-        <hr>
-        <h3 style="color:blue">Hope you like it.</h3>
-    
-    
-    """)
+    return render(request, "home/index.html")
 
 
 
