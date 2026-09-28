@@ -5,7 +5,17 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return render(request, "home/index.html")
+
+    peoples = [
+        {'name': 'siya' , 'age' : 20},
+        {'name': 'divya' , 'age' : 21},
+        {'name': 'esha' , 'age' : 22},
+        {'name': 'rita' , 'age' : 17},
+        {'name': 'sita' , 'age' : 15},
+    ]
+
+
+    return render(request, "home/index.html" , context={'peoples' : peoples})
 
 
 
