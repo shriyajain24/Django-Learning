@@ -13,6 +13,9 @@ def home(request):
         {'name': 'rita' , 'age' : 17},
         {'name': 'sita' , 'age' : 15},
     ]
+    
+    for people in peoples:
+        print(people)
 
 
     return render(request, "home/index.html" , context={'peoples' : peoples})
