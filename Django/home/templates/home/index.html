@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Django tutorial</title>
+    <style>
+        table,th,td {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
     
@@ -12,6 +17,25 @@
     
     {{ peoples }}
     
+
+    <table >
+  <tr>
+    <th>S.No</th>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table>
+
 
     <script>
         console.log("Hello Django");
