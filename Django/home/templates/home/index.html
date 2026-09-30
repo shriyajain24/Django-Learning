@@ -24,6 +24,7 @@
     <th>S.No</th>
     <th>Name</th>
     <th>Age</th>
+    <th>Can Vote</th>
   </tr>
 
   {% for people in peoples %}
@@ -32,6 +33,13 @@
     <td>{{forloop.counter}}</td>
     <td>{{people.name}}</td>
     <td>{{people.age}}</td>
+    <td {% if people.age < 18 %}style="background-color: red"{% else %}style="background-color: green"{% endif %}>
+        {% if people.age >= 18 %}
+            👍
+        {% else %}
+            👎
+        {% endif %}
+
   </tr>
   
   {% endfor %}
