@@ -7,11 +7,11 @@ from django.http import HttpResponse
 def home(request):
 
     peoples = [
-        {'name': 'siya' , 'age' : 20},
-        {'name': 'divya' , 'age' : 21},
-        {'name': 'esha' , 'age' : 22},
-        {'name': 'rita' , 'age' : 17},
-        {'name': 'sita' , 'age' : 15},
+        {'name': 'Siya mehta' , 'age' : 20},
+        {'name': 'Divya sharma' , 'age' : 21},
+        {'name': 'Esha patel' , 'age' : 22},
+        {'name': 'Rita desai' , 'age' : 17},
+        {'name': 'Sita jain' , 'age' : 15},
     ]
     
     for people in peoples:
