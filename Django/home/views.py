@@ -14,17 +14,22 @@ def home(request):
         {'name': 'Sita jain' , 'age' : 15},
     ]
     
+    for people in peoples:
+        if people['age'] :
+            print("Yes")
+        
+    
     vegetables = ['potato', 'tomato', 'onion', 'cabbage', 'carrot', 'beans', 'peas']
 
-    return render(request, "home/index.html" , context={'peoples' : peoples, 'vegetables' : vegetables})
+    return render(request, "home/index.html" , context={'page' : 'Django 2026 Tutorial','peoples' : peoples, 'vegetables' : vegetables})
 
 def about(request):
-   
-    return render(request, "home/about.html")
+    context = {'page': 'About'}
+    return render(request, "home/about.html", context)
 
 def contact(request):
-
-    return render(request, "home/contact.html")
+    context = {'page': 'Contact'}
+    return render(request, "home/contact.html", context)
 
 def success(request):
     print("*" * 10)
