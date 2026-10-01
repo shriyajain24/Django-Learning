@@ -14,11 +14,9 @@ def home(request):
         {'name': 'Sita jain' , 'age' : 15},
     ]
     
-    vegetables = [
-        
-    ]
+    vegetables = ['potato', 'tomato', 'onion', 'cabbage', 'carrot', 'beans', 'peas']
 
-    return render(request, "home/index.html" , context={'peoples' : peoples, 'text' : text})
+    return render(request, "home/index.html" , context={'peoples' : peoples, 'vegetables' : vegetables})
 
 
 

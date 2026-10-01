@@ -47,7 +47,15 @@
 
 
     
-      <p>{{text|truncatewords:80}}</p>    
+      <p>
+        {% if "cucumber" in vegetables %}
+            yes available
+        {% elif "tomato" in vegetables %}
+            yes available
+        {% else %}
+            not available
+        {% endif %}
+      </p>    
 
     <script>
         console.log("Hello Django");
