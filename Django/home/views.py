@@ -14,11 +14,11 @@ def home(request):
         {'name': 'Sita jain' , 'age' : 15},
     ]
     
-    for people in peoples:
-        print(people)
+    vegetables = [
+        
+    ]
 
-
-    return render(request, "home/index.html" , context={'peoples' : peoples})
+    return render(request, "home/index.html" , context={'peoples' : peoples, 'text' : text})
 
 
 
