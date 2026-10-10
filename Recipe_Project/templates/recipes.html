@@ -2,29 +2,24 @@
 {% block start %}
     
     
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Recipes</h1>
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Recipe Name</th>
-                        <th>Recipe Description</th>
-                        <th>Recipe Image</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for recipe in recipes %}
-                    <tr>
-                        <td>{{ recipe.recipe_name }}</td>
-                        <td>{{ recipe.recipe_description }}</td>
-                        <td><img src="{{ recipe.recipe_image.url }}" alt="{{ recipe.recipe_name }}" width="100"></td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+<div class="container" mt-5>
+    <form class="col-6 mx-auto card p-3 shadow-lg">
+        <h2>Add Recipe</h2>
+        <hr>
+        <div class="mb-3">
+            <label for="recipe_name" class="form-label">Recipe Name</label>
+            <input type="text" class="form-control" >
         </div>
-    </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Recipe Description</label>
+            <textarea class="form-control"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Recipe Image</label>
+            <input type="file" class="form-control" >
+        </div>
+        <button type="submit" class="btn btn-success">Add Recipe</button>
+    </form>
+</div>
 
 {% endblock %}
