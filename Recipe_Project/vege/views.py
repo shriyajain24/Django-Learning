@@ -31,6 +31,13 @@ def recipes(request):
     return render(request, "recipes.html", context)
 
 
+def update_recipe(request,id):
+    queryset = Recipe.objects.get(id = id)
+    context = {
+        "recipe": queryset
+    }
+    return render(request, "update_recipe.html", context)
+
 def delete_recipe(request, id):
     queryset = Recipe.objects.get(id=id)
     queryset.delete()
