@@ -24,6 +24,12 @@ def recipes(request):
         return redirect("/")
     
     queryset = Recipe.objects.all()
+    
+    
+    if request.GET.get('search'):
+        queryset = queryset.filter(recipe_name__icontains = request.GET.get('search'))
+    
+    
     context = {
         "recipes": queryset
     }
