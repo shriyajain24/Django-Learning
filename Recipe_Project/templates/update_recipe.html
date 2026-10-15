@@ -10,12 +10,12 @@
         <hr>
         <div class="mb-3">
             <label for="recipe_name" class="form-label">Recipe Name</label>
-            <input name="recipe_name" required type="text" class="form-control" >
+            <input name="recipe_name" value ="{{recipe.recipe_name}}" required type="text" class="form-control" >
         </div>
         <div class="mb-3">
             <label for="description" 
              class="form-label">Recipe Description</label>
-            <textarea name="recipe_description" class="form-control" required ></textarea>
+            <textarea class="form-control" value="" name="recipe_description" required >{{recipe.recipe_description}}</textarea>
         </div>
         <div class="mb-3">
             <label for="image"  class="form-label">Recipe Image</label>
