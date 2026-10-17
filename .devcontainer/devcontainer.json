@@ -1,10 +1,17 @@
 {
   "name": "Django Environment",
-  "postCreateCommand": "python3 -m venv /workspaces/Django-Learning/myenv && /workspaces/Django-Learning/myenv/bin/pip install -r requirements.txt",
+  "postCreateCommand": "python3 -m venv /workspaces/Django-Learning/myenv && /workspaces/Django-Learning/myenv/bin/pip install -r requirements.txt && echo 'source /workspaces/Django-Learning/myenv/bin/activate' >> ~/.bashrc",
   "customizations": {
     "vscode": {
       "settings": {
-        "python.defaultInterpreterPath": "/workspaces/Django-Learning/myenv/bin/python"
+        "python.defaultInterpreterPath": "/workspaces/Django-Learning/myenv/bin/python",
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "bash",
+            "args": ["-c", "source /workspaces/Django-Learning/myenv/bin/activate; exec bash"]
+          }
+        }
       }
     }
   }
