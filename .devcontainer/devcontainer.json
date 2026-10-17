@@ -1,0 +1,11 @@
+{
+  "name": "Django Environment",
+  "postCreateCommand": "python3 -m venv /workspaces/Django-Learning/myenv && /workspaces/Django-Learning/myenv/bin/pip install -r requirements.txt",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/workspaces/Django-Learning/myenv/bin/python"
+      }
+    }
+  }
+}
