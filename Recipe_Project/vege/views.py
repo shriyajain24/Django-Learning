@@ -75,4 +75,4 @@ def delete_recipe(request, id):
 
 
 def login_page(request):
-    return render(request , 'login.html')
+    return render(request , "login.html")
