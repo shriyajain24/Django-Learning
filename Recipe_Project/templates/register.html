@@ -8,21 +8,36 @@
         {% csrf_token %}
         <h2>Register</h2>
         <hr>
-        
+        {% if messages %}
+
+        <div class="alert theme-primary" role="alert">
+            {% for message in messages %}
+            {{ message }}
+             {% endfor %}
+        </div>
+
+        <ul class="messages">
+           
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+           
+        </ul>
+        {% endif %}
+
+
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">First name</label>
-              <input type="password" class="form-control" name="first_name" id="exampleInputPassword1">
+              <input type="text" class="form-control" name="first_name" id="exampleInputPassword1">
             </div>
 
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Last name</label>
-              <input type="password" class="form-control" name="last_name" id="exampleInputPassword1">
+              <input type="text" class="form-control" name="last_name" id="exampleInputPassword1">
             </div>
 
 
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Username</label>
-              <input type="email" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="text" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp">
               <div id="emailHelp" class="form-text">We’ll never share your email with anyone else.</div>
             </div>
 
