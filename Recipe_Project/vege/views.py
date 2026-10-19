@@ -96,7 +96,7 @@ def register_page(request):
         
         if user.exists():
             messages.info(request , 'Username already taken ')
-            return redirect("/")
+            return redirect('/register/')
             
         user = User.objects.create(
             first_name = first_name,
@@ -111,6 +111,6 @@ def register_page(request):
         
         messages.info(request , "Account created successfully")
         
-        return redirect("/")
+        return redirect('/register/')
     
     return render(request , "register.html")
