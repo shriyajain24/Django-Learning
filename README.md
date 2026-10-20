@@ -1,49 +1,47 @@
 # Django Learning
 
-This repository is a beginner-friendly Django project used for learning and practicing core Django concepts such as app structure, templates, URLs, and views.
+This repository is a collection of beginner-friendly Django exercises and mini-projects used to practice core concepts such as project setup, app creation, templates, URLs, views, models, migrations, and full-stack app development.
 
 ## Project Overview
 
-The project contains a Django app named `home` and a supporting `accounts` app. It includes a simple page flow with:
+The repository includes several learning modules, each focused on a different Django topic:
 
-- a home page rendered from a template
-- a success page response
-- Django URL routing setup
-- a default SQLite database
+- Django app creation and templates
+- Django shell usage
+- Models and migrations
+- A recipe project with multiple apps and templates
 
 ## Repository Structure
 
 ```text
 Django-Learning/
+├── .devcontainer/
 ├── .gitignore
 ├── README.md
-└── Django/
-    ├── Django/
-    │   ├── __init__.py
-    │   ├── asgi.py
-    │   ├── settings.py
-    │   ├── urls.py
-    │   └── wsgi.py
-    ├── accounts/
-    │   ├── __init__.py
-    │   ├── admin.py
-    │   ├── apps.py
-    │   ├── models.py
-    │   ├── tests.py
-    │   └── views.py
-    ├── home/
-    │   ├── __init__.py
-    │   ├── admin.py
-    │   ├── apps.py
-    ��   ├── migrations/
-    │   ├── models.py
-    │   ├── templates/
-    │   │   └── home/
-    │   │       └── index.html
-    │   ├── tests.py
-    │   └── views.py
-    ├── db.sqlite3
-    └── manage.py
+├── requirements.txt
+├── Django_AppCreation_And_Templates/
+│   ├── Django/
+│   ├── accounts/
+│   ├── home/
+│   ├── manage.py
+│   └── ...
+├── Django_Shell/
+├── Models_and_Migration/
+│   ├── account/
+│   ├── home/
+│   ├── myproject/
+│   ├── manage.py
+│   └── ...
+├── Recipe_Project/
+│   ├── core/
+│   ├── home/
+│   ├── public/
+│   ├── templates/
+│   ├── vege/
+│   ├── local_data.py
+│   ├── manage.py
+│   └── ...
+└── .
 ```
 
 ## Tech Stack
@@ -52,13 +50,15 @@ Django-Learning/
 - Django
 - SQLite
 - HTML
+- CSS (in project templates)
 
 ## Getting Started
 
-1. Navigate to the Django project folder:
+1. Clone the repository:
 
 ```bash
-cd Django
+git clone https://github.com/shriyajain24/Django-Learning.git
+cd Django-Learning
 ```
 
 2. Create and activate a virtual environment (optional but recommended):
@@ -66,18 +66,19 @@ cd Django
 ```bash
 python -m venv venv
 source venv/bin/activate   # On macOS/Linux
-venv\Scripts\activate     # On Windows
+venv\Scripts\activate      # On Windows
 ```
 
 3. Install dependencies:
 
 ```bash
-pip install django
+pip install -r requirements.txt
 ```
 
-4. Run the development server:
+4. Navigate to a specific Django project folder and run the development server:
 
 ```bash
+cd Django_AppCreation_And_Templates
 python manage.py runserver
 ```
 
@@ -87,12 +88,13 @@ python manage.py runserver
 http://127.0.0.1:8000/
 ```
 
-## App Behavior
+## Learning Modules
 
-- The root URL (`/`) renders the `home` page.
-- The `/success-page/` route returns a simple success HTTP response.
-- The admin interface is available at `/admin/`.
+- Django_AppCreation_And_Templates: practice app creation, Django project structure, and template rendering.
+- Django_Shell: experiments using the Django shell and queryset operations.
+- Models_and_Migration: examples of models, database setup, and migrations.
+- Recipe_Project: a more complete project involving recipe-related pages and templates.
 
 ## Notes
 
-This project is mainly intended for learning Django fundamentals and experimenting with project/app organization.
+This repository is intended for learning Django fundamentals, experimenting with app organization, and building small real-world examples step by step.
