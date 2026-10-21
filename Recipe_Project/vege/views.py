@@ -78,6 +78,19 @@ def delete_recipe(request, id):
 
 
 def login_page(request):
+    
+    if request.method == "POST":
+            
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+            
+            if User.object.filter(username = username).exists():
+                messages.info(request , 'Invalid Username')
+                return redirect('/login/')
+                            
+                
+            
+            
     return render(request , "login.html")
 
 
